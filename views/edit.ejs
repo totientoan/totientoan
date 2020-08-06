@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:3000"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        input{
+            margin: 9px;
+        }
+        .charactor img{border-radius: 50%; width: 200px; height: 200px;}
+    </style>
+</head>
+<body>
+    <h2>Edit Student</h2>
+    <!-- enctype="multipart/form-data dùng để upload ảnh -->
+    <form action="./edit" method="POST" enctype="multipart/form-data">
+        <!-- submit gửi dữ liệu -->
+        <input type="hidden" name="IDchar" value="<%- nhanvat._id %>">
+        <input type="text" value="<%- nhanvat.Name %>" name="txtName" placeholder="Name">   <br>
+        <div class="charactor">
+            <img src="upload/<%- nhanvat.Image%>" ><br>
+        </div>
+        <input type="file" name="studentImage">                                             <br>
+        <input type="text" value="<%- nhanvat.Age %>" name="txtAge" placeholder="Age">      <br>
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

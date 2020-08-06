@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new</title>
+    <style>
+        input{
+            margin: 9px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add new Student</h2>
+    <form action="./add" method="POST" enctype="multipart/form-data">
+        <!-- submit gửi dữ liệu -->
+        <input type="text" name="txtName" placeholder="Name"> <br>
+        <input type="file" name="studentImage">               <br>
+        <input type="text" name="txtAge" placeholder="Age">   <br>
+        <input type="submit" value="add new">
+    </form>
+</body>
+</html>

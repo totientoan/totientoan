@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #studentList{text-align: center;}
+        .charactor a{display: block; width: 45%; float: left; background-color: black; color: yellow; padding: 3px; margin-bottom: 20px; text-decoration: none;}
+        .charactor a:hover{background-color: blue;}
+        .charactor img{border-radius: 50%; width: 200px; height: 200px;}
+    </style>
+</head>
+<body>
+    <div id = "studentList">
+        <a href="/add" >Add new</a>
+        <% danhsach.forEach(function(student){ %>
+        <div class="charactor">
+                <img src="./upload/<%- student.Image %>" alt="">
+                <div class="studentName"> <%- student.Name %></div>
+                <div class="studentAge"> <%- student.Age %></div>
+                <div class="button">
+                    <a href="./edit/<%- student._id %>" >Edit</a>
+                    <a href="./delete/<%- student._id %>" >Delete</a>
+                </div>
+        </div> 
+        <% });%>
+    </div>
+</body>
+</html>
